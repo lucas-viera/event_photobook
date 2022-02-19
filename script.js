@@ -1,22 +1,28 @@
-const loadingText = document.querySelector('.loading-percentage');
-const background = document.querySelector('.background');
+const couple_name = document.getElementById("couple-name");
+const percentage = document.getElementById("percentage");
+const loadingText = document.getElementsByClassName('loading-percentage');
+const background = document.getElementsByClassName('background');
 
 let loadValue = 0;
-let interval = setInterval(blurring, 30); //in miliseconds
+let loadInterval = setInterval(blurring, 30); //3 seconds
+let namesInterval = setInterval(welcome, 4000);
+
+
 
 function blurring(){
     loadValue++;
     if (loadValue > 99){
-        clearInterval(interval);
+        clearInterval(loadInterval);
     }
-    loadingText.innerText = `${loadValue}%`;
-    loadingText.getElementsByClassName.opacity = scale (loadValue, 0, 100, 1, 0);
-    background.style.filter = `blur(${scale(loadValue, 0, 100, 30, 0)}px)`;
+    percentage.innerText = `${loadValue}%`;
+    percentage.style.opacity = scale(loadValue, 0, 100, 1, 0);
+    background[0].style.filter = `blur(${scale(loadValue, 0, 100, 30, 0)}px)`;
 }
 
-
 function welcome(){
-    loadingText.style.display = `none`;
+    couple_name.classList.toggle("fadeIn");
+    percentage.classList.toggle("fadeOut");
+    clearInterval(namesInterval);
 }
 
 const scale = (num, in_min, in_max, out_min, out_max) => {

@@ -14,14 +14,8 @@ body {
     margin: 0;
 }
 
-h1 {
-    font-family: 'Dancing Script', sans-serif;
-    display: None;
-    
-}
-
 .background {
-    background: url(https://images.unsplash.com/photo-1602265346074-218eb0fc8011?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80) no-repeat center center/cover;
+    background: url(https://images.unsplash.com/photo-1551049699-b58eccc77864?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80) no-repeat center center/cover;
     position: absolute;
     top: -30;       /*useful for blurring effect*/    
     left: -30;      /*useful for blurring effect*/
@@ -31,7 +25,30 @@ h1 {
     filter: blur(0px);
 }
 
+.names {
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 80px;
+    visibility:hidden;
+    opacity: 0;
+    transition: visibility 0s linear 500ms, opacity 500ms;
+    color: #ffffff;
+}
+
 .loading-percentage {
     font-size: 50px;
     color: #ffffff;
 }
+
+.fadeIn {
+    visibility:visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 500ms;
+}
+
+.fadeOut {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 5000ms, opacity 700ms;
+}
+
+

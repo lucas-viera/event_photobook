@@ -1,2 +1,3 @@
-# blurry_loading_effect
-HTML, CSS &amp; JavaScript Project for Blurry Loading Website Effect
+# Blurry Loading Effect
+
+Using `HTML`, `CSS` and `JavaScript` we generate a visual effect for a website loading with a blurry look and feel.
